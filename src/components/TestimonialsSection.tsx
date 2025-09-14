@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
             <div className="text-left">
-              <p className="font-heading font-semibold text-primary">+5000 Pacientes</p>
+              <p className="font-heading font-semibold text-primary">Resultados Garantidos</p>
               <p className="text-xs text-muted-foreground">Avaliação 4.9/5.0</p>
             </div>
           </div>
