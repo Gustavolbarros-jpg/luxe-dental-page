@@ -82,10 +82,10 @@ const HeroSection = () => {
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 bg-card backdrop-blur-md border border-primary/20 rounded-2xl p-6 shadow-gold animate-fade-in">
               <p className="text-primary font-heading font-semibold text-lg mb-1">
-                Tecnologia Digital 3D
+                Dr. Gustavo Duarte
               </p>
               <p className="text-sm text-muted-foreground">
-                Planejamento preciso e personalizado
+                Especialista em Facetas em Resina
               </p>
             </div>
           </div>

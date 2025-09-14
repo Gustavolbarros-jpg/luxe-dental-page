@@ -70,7 +70,7 @@ const BeforeAfterGallery = () => {
             opts={{ loop: true }} 
             plugins={[
               Autoplay({
-                delay: 1000,
+                delay: 2000,
                 stopOnInteraction: false, // <-- AJUSTE AQUI
                 stopOnMouseEnter: true,
               }),
@@ -112,7 +112,7 @@ const BeforeAfterGallery = () => {
            {/* Botão de CTA agora é um link funcional para o WhatsApp */}
           <Button asChild variant="gold" size="xl">
             <a href="https://wa.me/5581997464264" target="_blank" rel="noopener noreferrer">
-              Agendar Consulta de Avaliação
+              Agende sua Consulta
             </a>
           </Button>
         </div>

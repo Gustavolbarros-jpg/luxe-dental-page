@@ -78,7 +78,7 @@ const AboutSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild variant="gold" size="lg">
                  <a href="https://wa.me/5581997464264" target="_blank" rel="noopener noreferrer">
-                    Agendar Sua Consulta
+                    Agende Sua Consulta
                  </a>
               </Button>
               <Button asChild variant="gold-outline" size="lg">

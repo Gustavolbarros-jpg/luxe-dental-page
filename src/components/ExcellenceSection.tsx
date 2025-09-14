@@ -41,7 +41,7 @@ const ExcellenceSection = () => {
 
   // Configuração do autoplay (1500ms + não parar ao interagir)
   const plugin = useRef(
-    Autoplay({ delay: 1500, stopOnInteraction: false })
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   );
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const ExcellenceSection = () => {
         <div className="text-center mt-16">
           <Button asChild variant="gold" size="xl">
             <a href="https://wa.me/5581997464264" target="_blank" rel="noopener noreferrer">
-              Agendar Consulta de Avaliação
+              Agende sua Consulta 
             </a>
           </Button>
         </div>
