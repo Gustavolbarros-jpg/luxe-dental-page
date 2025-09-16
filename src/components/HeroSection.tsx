@@ -14,7 +14,7 @@ const HeroSection = () => {
           
           {/* Left Content */}
           <div className="animate-fade-in-up">
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
               O sorriso{" "}
               <span className="bg-gradient-gold bg-clip-text text-transparent">
                 perfeito
@@ -33,10 +33,9 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* Botão "Agendar Avaliação" agora é um link funcional para o WhatsApp */}
               <Button asChild variant="gold" size="xl" className="group">
                 <a 
-                  href="https://wa.me/5581997464264" // Link do WhatsApp CORRIGIDO
+                  href="https://wa.me/5581997464264"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
@@ -47,18 +46,17 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            {/* Trust Indicators - AJUSTE FINAL */}
-            <div className="mt-12 grid grid-cols-3 gap-4 text-left">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               <div>
-                <p className="text-xl md:text-3xl font-bold text-primary font-heading">Arte & Precisão</p>
+                <p className="text-xl md:text-2xl font-bold text-primary font-heading">Arte & Precisão</p>
                 <p className="text-sm text-muted-foreground">Técnica artesanal com planejamento digital.</p>
               </div>
               <div>
-                <p className="text-xl md:text-3xl font-bold text-primary font-heading">Sorrisos Únicos</p>
+                <p className="text-xl md:text-2xl font-bold text-primary font-heading">Sorrisos Únicos</p>
                 <p className="text-sm text-muted-foreground">Cada sorriso é uma obra de arte exclusiva.</p>
               </div>
               <div>
-                <p className="text-xl md:text-3xl font-bold text-primary font-heading">Padrão Premium</p>
+                <p className="text-xl md:text-2xl font-bold text-primary font-heading">Padrão Premium</p>
                 <p className="text-sm text-muted-foreground">Materiais de alta performance e cuidado exclusivo.</p>
               </div>
             </div>
@@ -70,16 +68,14 @@ const HeroSection = () => {
               <img 
                 src={heroImage}
                 alt="Dr. Gustavo Duarte, especialista em facetas de resina"
-                className="w-full h-[600px] object-contain"
+                // A borda foi removida
+                className="w-full h-[600px] object-contain rounded-3xl" 
               />
-              {/* Gold Accent Border */}
-              <div className="absolute inset-0 border-2 border-primary/20 rounded-3xl pointer-events-none"></div>
               
               {/* Spotlight Effect */}
-              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/30 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/30 pointer-events-none rounded-3xl"></div>
             </div>
             
-            {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 bg-card backdrop-blur-md border border-primary/20 rounded-2xl p-6 shadow-gold animate-fade-in">
               <p className="text-primary font-heading font-semibold text-lg mb-1">
                 Dr. Gustavo Duarte
@@ -92,7 +88,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
     </section>
   );

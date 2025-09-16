@@ -1,29 +1,19 @@
-import { Star, Quote } from "lucide-react";
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
+import { Star, Quote, Instagram } from "lucide-react"; // Adicionado ícone do Instagram
+import { Button } from "@/components/ui/button"; // Importado o componente Button
 
+// DEPOIMENTOS ATUALIZADOS - Sem nomes ou imagens
 const testimonials = [
   {
-    name: "Maria Helena Silva",
-    role: "Empresária",
-    image: testimonial1,
     rating: 5,
-    text: "Depois de anos escondendo meu sorriso, finalmente tenho a confiança que sempre quis. O atendimento foi excepcional e o resultado superou todas as minhas expectativas."
+    text: "Ficou muito top, não é porque é meu mas ficou show. Arrocha fio, diferença absurda, mudou demais kkkkkkkkkk."
   },
   {
-    name: "Roberto Mendes",
-    role: "Advogado",
-    image: testimonial2,
     rating: 5,
-    text: "A tecnologia utilizada na clínica é impressionante. O procedimento foi rápido, indolor e o resultado ficou extremamente natural. Recomendo sem hesitar."
+    text: "Meu velho, sei que ainda não terminamos, mas tô começando a entender agora o quão bom ficou kkk. Na hora você fica se acostumando ainda, mas parabéns e muito obrigado pelo trabalho. Ficou show demais!!"
   },
   {
-    name: "Ana Carolina Dias",
-    role: "Arquiteta",
-    image: testimonial3,
     rating: 5,
-    text: "Profissionalismo e cuidado em cada detalhe. A equipe me deixou muito segura durante todo o processo. Meu sorriso nunca esteve tão bonito!"
+    text: "Oi Dr, bom dia. Quero lhe agradecer pelo excelente trabalho, mudou meu sorriso e minha autoestima. Estou muito satisfeita com o resultado e impressionada com sua atenção aos detalhes e profissionalismo."
   }
 ];
 
@@ -43,7 +33,7 @@ const TestimonialsSection = () => {
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-body">
-            Conheça a experiência de quem já transformou sua vida com nossos implantes premium
+            Conheça a experiência de quem já transformou o sorriso conosco.
           </p>
         </div>
 
@@ -52,72 +42,43 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group bg-card rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-500 animate-fade-in-up relative overflow-hidden"
+              className="group bg-card rounded-3xl p-8 shadow-soft hover:shadow-premium transition-all duration-500 animate-fade-in-up relative overflow-hidden flex flex-col justify-between"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Quote Icon Background */}
-              <Quote className="absolute top-4 right-4 w-12 h-12 text-primary/10" />
-              
-              {/* Rating Stars */}
-              <div className="flex gap-1 mb-6">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-primary text-primary animate-glow"
-                    style={{ animationDelay: `${i * 100}ms` }}
-                  />
-                ))}
+              <div>
+                <Quote className="absolute top-4 right-4 w-12 h-12 text-primary/10" />
+                
+                <div className="flex gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-primary text-primary animate-glow"
+                      style={{ animationDelay: `${i * 100}ms` }}
+                    />
+                  ))}
+                </div>
+
+                <p className="text-foreground leading-relaxed font-body italic">
+                  "{testimonial.text}"
+                </p>
               </div>
 
-              {/* Testimonial Text */}
-              <p className="text-foreground mb-8 leading-relaxed font-body italic">
-                "{testimonial.text}"
-              </p>
-
-              {/* Author Info */}
-              <div className="flex items-center gap-4">
-                <div className="relative">
-                  <img
-                    src={testimonial.image}
-                    alt={`Foto de ${testimonial.name}`}
-                    className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                  />
-                  <div className="absolute inset-0 rounded-full bg-gradient-gold opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                </div>
-                <div>
-                  <p className="font-heading font-semibold text-foreground">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </p>
-                </div>
-              </div>
-
-              {/* Gold Line Accent */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
 
-        {/* Trust Badge */}
+        {/* NOVO BOTÃO PARA O INSTAGRAM */}
         <div className="mt-16 text-center animate-fade-in">
-          <div className="inline-flex items-center gap-4 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full px-8 py-4">
-            <div className="flex -space-x-2">
-              {[testimonial1, testimonial2, testimonial3].map((img, i) => (
-                <img
-                  key={i}
-                  src={img}
-                  alt=""
-                  className="w-10 h-10 rounded-full border-2 border-background"
-                />
-              ))}
-            </div>
-            <div className="text-left">
-              <p className="font-heading font-semibold text-primary">Resultados Garantidos</p>
-              <p className="text-xs text-muted-foreground">Avaliação 4.9/5.0</p>
-            </div>
-          </div>
+          <p className="text-lg text-muted-foreground mb-6 font-body">
+            Veja mais sobre meu trabalho e depoimentos reais no Instagram.
+          </p>
+          <Button asChild variant="gold-outline" size="lg">
+            <a href="https://www.instagram.com/gustavoduarteribeiro/" target="_blank" rel="noopener noreferrer">
+              <Instagram className="mr-2" />
+              Acompanhar no Instagram
+            </a>
+          </Button>
         </div>
       </div>
     </section>
@@ -125,3 +86,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+

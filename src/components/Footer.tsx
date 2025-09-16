@@ -36,7 +36,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5 text-primary group-hover:text-background" />
               </a>
               <a 
-                href="https://wa.me/5581997464264" 
+                href="https:/wa.me/+5581997464264" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-card border border-primary/20 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary group transition-all duration-300"
@@ -69,7 +69,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <p className="text-muted-foreground text-sm font-body">
-                  (81) 98222-3417
+                  (81) 99746-4264
                 </p>
               </div>
               <div className="flex items-center gap-3">
