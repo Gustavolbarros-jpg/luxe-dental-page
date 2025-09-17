@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
           <Button asChild variant="gold-outline" size="lg">
             <a href="https://www.instagram.com/gustavoduarteribeiro/" target="_blank" rel="noopener noreferrer">
               <Instagram className="mr-2" />
-              Acompanhar no Instagram
+              Siga no Instagram
             </a>
           </Button>
         </div>
